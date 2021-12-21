@@ -14,7 +14,7 @@ export class ListaCancionesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.canciones)
+    
   }
 
 }
