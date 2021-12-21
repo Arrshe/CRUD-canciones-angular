@@ -17,9 +17,9 @@ export class AgregarCancionComponent implements OnInit {
     private crudService:CrudServiceService
   ) {
     this.formulario = new FormGroup({
-      nombreCancion: new FormControl(),
-      nombreAutor: new FormControl(),
-      generoMusical: new FormControl()
+      nombreCancion: new FormControl('',Validators.required),
+      nombreAutor: new FormControl('',Validators.required),
+      generoMusical: new FormControl('',Validators.required)
     })
    }
 
