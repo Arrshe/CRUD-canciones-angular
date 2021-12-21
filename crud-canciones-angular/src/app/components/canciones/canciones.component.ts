@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CANCIONES } from '../../mock-canciones/mock-canciones';
+import Cancion from 'src/app/model/Cancion';
+import { CrudServiceService } from 'src/app/services/crud-service.service';
 
 @Component({
   selector: 'app-canciones',
@@ -8,11 +9,17 @@ import { CANCIONES } from '../../mock-canciones/mock-canciones';
 })
 export class CancionesComponent implements OnInit {
 
-  canciones = CANCIONES;
+  canciones: Cancion[] = [];
 
-  constructor() { }
+  constructor(
+    private crudService:CrudServiceService
+  ) { }
 
   ngOnInit(): void {
+  
+    this.crudService.getCanciones$().subscribe(canciones =>{
+      this.canciones = canciones;
+    });
   }
 
 }
