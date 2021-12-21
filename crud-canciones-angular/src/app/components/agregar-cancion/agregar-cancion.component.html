@@ -1,0 +1,15 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="nombreCancion">Nombre de la canción</label>
+        <input type="text" class="form-control" formControlName="nombreCancion">
+    </div>
+    <div class="form-group">
+        <label for="nombreAutor">Nombre del autor</label>
+        <input type="text" class="form-control" formControlName="nombreAutor">
+    </div>
+    <div class="form-group">
+        <label for="generoMusical">Nombre de la canción</label>
+        <input type="text" class="form-control" formControlName="generoMusical">
+    </div>
+    <input type="submit" value="Enviar">
+</form>
