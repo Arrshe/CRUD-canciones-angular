@@ -9,6 +9,7 @@ import Cancion from '../model/Cancion';
 export class CrudServiceService {
 
   private canciones : Cancion[];
+  private mockCanciones: Cancion[] = CANCIONES;
   private canciones$ : Subject<Cancion[]>
 
   constructor() {
@@ -20,6 +21,7 @@ export class CrudServiceService {
 
   agregarCancion(cCancion:Cancion){
     this.canciones.push(cCancion);
+    this.mockCanciones.push(cCancion);
     this.canciones$.next(this.canciones);
   }
 

@@ -1,4 +1,4 @@
-<h2>Todas las canciones</h2>
+<h2>Nuevas canciones</h2>
 
 <div class="container">
     <div class="cancion" *ngFor="let cancion of canciones">
@@ -6,10 +6,6 @@
             <h3 class="cancion__texto-nombre-autor">{{cancion.nombreAutor}}</h3>
             <p class="cancion__texto-nombre-cancion">{{cancion.nombreCancion}}</p>
             <p class="cancion__texto-genero-musical">{{cancion.generoMusical}}</p>
-        </div>
-        <div class="cancion__botones">
-            <a routerLink="" class="cancion__boton-editar">EDITAR</a>
-            <a class="cancion__boton-eliminar">ELIMINAR</a>
         </div>
     </div>
 </div>
