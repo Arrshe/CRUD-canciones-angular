@@ -1,5 +1,9 @@
+<h2>Añade una nueva canción</h2>
+
 <div class="container">
     <form class="form-agregar-cancion" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        
+        <!--********** INPUT NOMBRE CANCION ***********-->
         <div class="form-agregar-cancion__form-group">
             <fieldset>
                 <legend>Nombre de la canción</legend>
@@ -7,9 +11,10 @@
             </fieldset>
             <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('nombreCancion')?.invalid">
                 Tienes que insertar el nombre de una canción
-            </small>
-               
+            </small>  
         </div>
+
+        <!--********** INPUT NOMBRE AUTOR ***********-->
         <div class="form-agregar-cancion__form-group">
             <fieldset>
                 <legend>Nombre del autor</legend>
@@ -19,6 +24,8 @@
                 Tienes que insertar el autor/a de la canción
             </small>
         </div>
+
+        <!--********** INPUT GÉNERO MUSICAL ***********-->
         <div class="form-agregar-cancion__form-group">
             <fieldset>
                 <legend>Género musical</legend>
@@ -28,7 +35,9 @@
                 Tienes que insertar el género musical de la canción
             </small>
         </div>
-        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar">
+
+        <!--********** INPUT SUBMIT ***********-->
+        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar" [disabled]="formulario.invalid">
     </form>
 </div>
 
