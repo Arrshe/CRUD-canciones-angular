@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { CrudServiceService } from 'src/app/services/crud-service.service';
+import { Validators } from '@angular/forms';
 
 
 @Component({
@@ -11,11 +13,13 @@ export class AgregarCancionComponent implements OnInit {
 
   formulario: FormGroup;
 
-  constructor() {
+  constructor(
+    private crudService:CrudServiceService
+  ) {
     this.formulario = new FormGroup({
-      nombreCancion: new FormControl(),
-      nombreAutor: new FormControl(),
-      generoMusical: new FormControl()
+      nombreCancion: new FormControl('',Validators.required),
+      nombreAutor: new FormControl('',Validators.required),
+      generoMusical: new FormControl('',Validators.required)
     })
    }
 
@@ -23,7 +27,7 @@ export class AgregarCancionComponent implements OnInit {
   }
 
   onSubmit(){
-    
+    this.crudService.agregarCancion(this.formulario.value);
   }
 
 }

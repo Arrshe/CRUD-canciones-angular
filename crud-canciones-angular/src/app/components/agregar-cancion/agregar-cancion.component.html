@@ -1,15 +1,24 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="nombreCancion">Nombre de la canción</label>
-        <input type="text" class="form-control" formControlName="nombreCancion">
-    </div>
-    <div class="form-group">
-        <label for="nombreAutor">Nombre del autor</label>
-        <input type="text" class="form-control" formControlName="nombreAutor">
-    </div>
-    <div class="form-group">
-        <label for="generoMusical">Nombre de la canción</label>
-        <input type="text" class="form-control" formControlName="generoMusical">
-    </div>
-    <input type="submit" value="Enviar">
-</form>
+<div class="container">
+    <form class="form-agregar-cancion" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="form-agregar-cancion__form-group">
+            <fieldset>
+                <legend>Nombre de la canción</legend>
+                <input type="text" class="form-control" formControlName="nombreCancion">
+            </fieldset>
+        </div>
+        <div class="form-agregar-cancion__form-group">
+            <fieldset>
+                <legend>Nombre del autor</legend>
+                <input type="text" class="form-control" formControlName="nombreAutor">
+            </fieldset> 
+        </div>
+        <div class="form-agregar-cancion__form-group">
+            <fieldset>
+                <legend>Género musical</legend>
+                <input type="text" class="form-control" formControlName="generoMusical">
+            </fieldset>
+        </div>
+        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar">
+    </form>
+</div>
+
