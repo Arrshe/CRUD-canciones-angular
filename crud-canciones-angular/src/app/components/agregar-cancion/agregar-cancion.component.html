@@ -3,20 +3,30 @@
         <div class="form-agregar-cancion__form-group">
             <fieldset>
                 <legend>Nombre de la canción</legend>
-                <input type="text" class="form-control" formControlName="nombreCancion">
+                <input type="text" class="form-control" formControlName="nombreCancion" required>
             </fieldset>
+            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('nombreCancion')?.invalid">
+                Tienes que insertar el nombre de una canción
+            </small>
+               
         </div>
         <div class="form-agregar-cancion__form-group">
             <fieldset>
                 <legend>Nombre del autor</legend>
-                <input type="text" class="form-control" formControlName="nombreAutor">
-            </fieldset> 
+                <input type="text" class="form-control" formControlName="nombreAutor" required>
+            </fieldset>
+            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('nombreAutor')?.invalid">
+                Tienes que insertar el autor/a de la canción
+            </small>
         </div>
         <div class="form-agregar-cancion__form-group">
             <fieldset>
                 <legend>Género musical</legend>
-                <input type="text" class="form-control" formControlName="generoMusical">
+                <input type="text" class="form-control" formControlName="generoMusical" required>
             </fieldset>
+            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('generoMusical')?.invalid">
+                Tienes que insertar el género musical de la canción
+            </small>
         </div>
         <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar">
     </form>
