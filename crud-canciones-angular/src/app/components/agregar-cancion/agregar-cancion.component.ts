@@ -27,7 +27,13 @@ export class AgregarCancionComponent implements OnInit {
   }
 
   onSubmit(){
-    this.crudService.agregarCancion(this.formulario.value);
+
+    if(this.formulario.valid){
+      this.crudService.agregarCancion(this.formulario.value);
+      console.log('todo ok')
+    }else{
+      console.log('no valido')
+    }
   }
 
 }

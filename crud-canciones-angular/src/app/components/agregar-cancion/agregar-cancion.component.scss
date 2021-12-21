@@ -15,8 +15,7 @@
         background-color: $color-rosa;
         border-radius: 1rem;
 
-        height: 300px;
-        padding: 1rem 5rem;
+        padding: 2rem 5rem;
 
         color: $color-amarillo;
         font-weight: bolder;
@@ -25,8 +24,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 1rem 0rem;
             
-
+            .form-agregar-cancion__form-group__msg-error{
+                color: $color-celeste;
+                padding: 1rem 0rem;
+            }
             
         }
         
