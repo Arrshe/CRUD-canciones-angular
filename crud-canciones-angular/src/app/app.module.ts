@@ -8,11 +8,10 @@ import { AppComponent } from './app.component';
 import { CancionesComponent } from './components/canciones/canciones.component';
 import { AgregarCancionComponent } from './components/agregar-cancion/agregar-cancion.component';
 import { HeaderComponent } from './components/header/header.component';
-import { EditarCancionComponent } from './components/editar-cancion/editar-cancion.component';
 import { ListaCancionesComponent } from './components/lista-canciones/lista-canciones.component';
 
 @NgModule({
-	declarations: [ AppComponent, CancionesComponent, AgregarCancionComponent, HeaderComponent, EditarCancionComponent, ListaCancionesComponent],
+	declarations: [ AppComponent, CancionesComponent, AgregarCancionComponent, HeaderComponent, ListaCancionesComponent],
 	imports: [ BrowserModule, AppRoutingModule, ReactiveFormsModule ],
 	providers: [],
 	bootstrap: [ AppComponent ]
