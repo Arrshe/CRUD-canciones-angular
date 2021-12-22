@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+$color-rosa: #fa119c;
+$color-morado: #ad1570;
+$color-amarillo: #fadf2a;
+$color-dorado: #ad980c;
+$color-celeste: #43edfa;
+$color-light: aliceblue;
+
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap';
+
+body { 
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fadf2a;
+}
+
+h1, h2{
+    text-align: center;
+}

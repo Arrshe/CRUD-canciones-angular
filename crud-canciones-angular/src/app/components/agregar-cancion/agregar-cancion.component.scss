@@ -1,0 +1,49 @@
+@import "../../../styles.scss";
+
+.container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .form-agregar-cancion{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $color-rosa;
+        border-radius: 1rem;
+
+        padding: 2rem 5rem;
+
+        color: $color-amarillo;
+        font-weight: bolder;
+    
+        .form-agregar-cancion__form-group{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem 0rem;
+            
+            .form-agregar-cancion__form-group__msg-error{
+                color: $color-celeste;
+                padding: 1rem 0rem;
+            }
+            
+        }
+        
+        .form-agregar-cancion__boton-submit{
+            background-color: $color-amarillo;
+            border: none;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+    
+            box-shadow: 2px 2px 1px $color-dorado;
+
+            &:active{
+                box-shadow: none;
+            }
+        }
+    }
+
+}

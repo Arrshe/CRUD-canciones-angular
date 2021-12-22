@@ -1,0 +1,71 @@
+@import "../../../styles.scss";
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+
+    .cancion{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        align-items: center;
+        background-color: $color-rosa;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+        font-weight: bold;
+        
+
+        .cancion__texto{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            
+
+            .cancion__texto-nombre-autor{
+                color: $color-amarillo;
+            }
+
+            .cancion__texto-nombre-cancion{
+                color: $color-light;
+            }
+
+            .cancion__texto-genero-musical{
+                align-self:flex-end;
+                font-weight: bolder;
+                color: $color-celeste;
+            }
+        }
+
+        .cancion__botones{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 300px;
+            border-top: 2px solid $color-light;
+            padding: 1rem;
+            
+            .cancion__boton-editar{
+                color:$color-light;
+                text-decoration: none;
+            
+                &:hover{
+                    color: $color-amarillo;
+                }
+            }
+
+            .cancion__boton-eliminar{
+                color:$color-light;
+                text-decoration: none;
+            
+                &:hover{
+                    color: $color-amarillo;
+                }
+            }
+        }
+    }
+}

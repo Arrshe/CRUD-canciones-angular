@@ -1,0 +1,16 @@
+@import "../../../styles.scss";
+
+.menu-nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .menu-nav__item{
+        background-color:rgb(51, 51, 51);
+        padding: 1rem;
+        border-radius: 1rem;
+        color: $color-light;
+        text-decoration: none;
+    }
+}
