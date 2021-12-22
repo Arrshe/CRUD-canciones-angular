@@ -11,10 +11,17 @@ export class ListaCancionesComponent implements OnInit {
 
   canciones:Cancion[] = CANCIONES;
 
+  cancionEdit!: Cancion;
+
   constructor() { }
 
   ngOnInit(): void {
     
+  }
+
+  getCancion(cancion:Cancion){
+    this.cancionEdit = cancion;
+    console.log(cancion)
   }
 
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { CANCIONES } from '../mock-canciones/mock-canciones'
 import Cancion from '../model/Cancion';
+import { ListaCancionesComponent } from '../components/lista-canciones/lista-canciones.component';
 
 @Injectable({
   providedIn: 'root'
